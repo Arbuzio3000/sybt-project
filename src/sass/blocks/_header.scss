@@ -5,6 +5,7 @@
     left: 50%;
     transform: translateX(-50%);
     min-height: 86px;
+    z-index: 999;
     &__nav{
         display: flex;
         justify-content: space-between;

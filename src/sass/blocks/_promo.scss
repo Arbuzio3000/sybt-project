@@ -1,8 +1,42 @@
 .promo{
-    display: block;
-    max-width: 1024px;
-    margin: 0 auto;
+    min-height: 100vh;
+    margin-top: -126px;
+    padding-top: 180px;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 850px 1fr;
+        align-items: center;
+    }
+    &__img{
+        width: 100%;
+        img{
+            max-width: 100%;
+            max-height: 460px;
+        }
+    }
+    &__title{
+        font-size: 64px;
+        font-weight: bold;
+        line-height: 130%;
+        color: $main-color-text-dark;
+    }
+    &__subtitle{
+        display: block;
+        width: 520px;
+        padding: 20px 72px;
+        margin-top: 43px;
+        align-self: center;
+        font-size: 26px;
+        font-weight: normal;
+        background-color: rgba($color: #686868, $alpha: .2);
+        backdrop-filter: blur(2px);
+        border-radius: 50px;
+    }
     &__btns{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
         width: 367px;
         display: flex;
         justify-content: space-between;
@@ -10,7 +44,6 @@
         border: solid 2px #E8E8E8;
         border-radius: 50px;
         margin: 0 auto;
-        margin-top: 300px;
     }
     &__btn{
         display: block;
