@@ -72,7 +72,34 @@ particlesJS("particles-js", {
 
   });
   
-  
-  /* ---- stats.js config ---- */
-  
-  
+
+  $(window).scroll(function(){
+		if($(this).scrollTop()>650){
+			$('.header').addClass('scroll');
+      $('.header__link').addClass('scroll');
+		} else{
+      $('.header').removeClass('scroll');
+			$('.header__link').removeClass('scroll');
+		}
+	});
+
+
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    autoHeight: true,
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 25,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.services__slider-button-next',
+      prevEl: '.services__slider-button-prev',
+    },
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
