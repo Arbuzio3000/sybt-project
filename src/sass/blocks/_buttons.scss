@@ -1,0 +1,13 @@
+.btn{
+    background-color: $main-color;
+    padding: 20px 40px;
+    border-radius: 60px;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    &:focus {outline: none !important;}
+}
+
+
+

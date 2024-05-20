@@ -11,7 +11,7 @@ $('.promo__btn').hover( function() {
         .addClass('promo__btn_active').siblings().removeClass('promo__btn_active')
 });
 
-/* ---- particles.js config ---- */
+/* ---- particles.js config  настройка сетки на promo---- */
 
 particlesJS("particles-js", {
     "particles": {
@@ -73,6 +73,8 @@ particlesJS("particles-js", {
   });
   
 
+  //изменение header при скролле
+
   $(window).scroll(function(){
 		if($(this).scrollTop()>650){
 			$('.header').addClass('scroll');
@@ -84,7 +86,9 @@ particlesJS("particles-js", {
 	});
 
 
-  const swiper = new Swiper('.swiper', {
+  //настройка слайдера
+
+  const swiper_services = new Swiper('.services__slider', {
     // Optional parameters
     direction: 'horizontal',
     autoHeight: true,
@@ -100,6 +104,21 @@ particlesJS("particles-js", {
 
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+      el: '#services__swiper',
+    },
+  });
+
+  const swiper_portfolio = new Swiper('.portfolio__slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    autoHeight: true,
+    autoplay: true,
+    loop: false,
+    slidesPerView: 2,
+    spaceBetween: 25, 
+
+    // If we need pagination
+    pagination: {
+      el: '#portfolio__swiper',
     },
   });
