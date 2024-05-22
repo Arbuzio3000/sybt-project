@@ -105,20 +105,50 @@ particlesJS("particles-js", {
     // If we need pagination
     pagination: {
       el: '#services__swiper',
+      clickable: true,
+    },
+
+    on: {
+      init() {
+        this.el.addEventListener('mouseenter', () => {
+          this.autoplay.stop();
+        });
+  
+        this.el.addEventListener('mouseleave', () => {
+          this.autoplay.start();
+        });
+      }
     },
   });
 
   const swiper_portfolio = new Swiper('.portfolio__slider', {
     // Optional parameters
     direction: 'horizontal',
+
     autoHeight: true,
-    autoplay: true,
-    loop: false,
+    autoplay: {
+      delay: 2000,
+    },
+    loop: true,
     slidesPerView: 2,
     spaceBetween: 25, 
 
     // If we need pagination
     pagination: {
       el: '#portfolio__swiper',
+      clickable: true,
+    },
+
+    
+    on: {
+      init() {
+        this.el.addEventListener('mouseenter', () => {
+          this.autoplay.stop();
+        });
+  
+        this.el.addEventListener('mouseleave', () => {
+          this.autoplay.start();
+        });
+      }
     },
   });
