@@ -152,3 +152,22 @@ particlesJS("particles-js", {
       }
     },
   });
+
+  const swiper_testimonials = new Swiper('.testimonials__slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    breakpointsBase: 'container',
+    centeredSlides: true,
+    initialSlide: 2,
+
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 25, 
+  });
+
+
+  $("a[href^='#']").click(function() {
+    const href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+});
